@@ -1,24 +1,22 @@
-# Reproduction for Exploring the Security Boundary of Data Reconstruction via Neuron Exclusivity Analysis
+# Computer Vision in Tennis
 
-### Group: 38
+### Group: 22
 ### Members: 
-            
+
+#### Alexandru Bobe: 
 #### Bogdan Simion: 5850185
-#### Haoran Wang: 5775213
+#### Onno Verberne:
              
-### This project was done in part to satisfy the requirements for the course Deep Learning(CS4240) at TU Delft.
-### We were tasked with reproducing the results of the paper “Exploring the Security Boundary of Data Reconstruction via Neuron Exclusivity Analysis”. In this blog we’ll be elaborating on our efforts to reproduce the results, the issues we faced and the discussion about the possibility of reproducing the paper.
+### This project was done in part to satisfy the requirements for the Seminar Computer Vision by Deep Learning course at TU Delft.
+### We aim to reproduce some parts of the paper "TenniSet: A Dataset for Dense Fine-Grained Event Recognition, Localisation and Description". In this blog we’ll be elaborating on our efforts to reproduce the results, the issues we faced and the discussion about the possibility of reproducing the paper.
 
 ## Introduction
-### In the paper [1], the author utilised rectified linear units (ReLUs)  and the gradients information from neural networks (mainly Fully connected neural networks and Convolutional neural networks), to reconstruct the training data fed from the input layer of the neural network. The technique they are using is by observing the neuron which was activated only once, also named Exclusively Activated Neurons (ExAN) [1] in a batch of training data points. It is possible to reconstruct the training data from combining the gradients and the results of the classification. Here, note ReLU plays an important role because it can filter out negative values and preserve non-negative values. By using this nice property and also acknowledging which set of neurons are the ExANs, it is possible to reconstruct the training data. Also do notice the backpropagation [2] plays an important role in reconstruction of the training data because backpropagation updates the gradients of ExAN only once. 
+
+### 
 
 ## Project goals
 
-### Despite the fact that this paper [1] used FNN and CNN to reconstruct the training data from RetinaMNIST [3] and ISIC skin cancer dataset[4], under the given short period of time within a single quarter, the TAs from this course asked us to reconstruct Figure 6 and Figure 8 in the paper. Figure 6 in the paper is about sampled reconstruction results on RetinaMNIST by using FNN and Figure 8 focuses on the Sampled results on the ISIC skin cancer dataset reconstructed from average gradient of VGG-13.  The authors of the paper [1] also implemented experiments related to the effectiveness of their method from preventing the leakage of the training data, which will not be implemented in this reconstruction project. 
-
-![Alt Text](https://github.com/Roywangxixixixixia/DL_Blog_Group_38.github.io/blob/main/RetinaMNIST.jpg)
-![Alt Text](https://github.com/Roywangxixixixixia/DL_Blog_Group_38.github.io/blob/main/ISIC.png)
-
+### 
 
 ## Methodology
 ### Our work was divided into multiple steps from gathering the data to actually reconstruct the whole image. We worked with RetinaMNIST only as the time did not permit us to work with the ISIC dataset too.
@@ -30,7 +28,6 @@
 ## Results
 ## We do not have any significant results as we did not manage to finish the paper reproduction in time, although we have some results for the network training part, which is shown below.
 
-![Alt Text](https://github.com/Roywangxixixixixia/DL_Blog_Group_38.github.io/blob/main/training_loss.png)
 
 ## Issues
 ### The issues related to reproducing the paper is that even though we finished the implementation of all the algorithms, we didn’t successfully run the algorithms in the paper. The main issue is that the gradient value is not guaranteed to be non-zero, and the algorithm took the first gradient value inside a layer as the denominator to calculate the common results after dividing the gradient of the current layer by the gradient of the previous layer. The reason for the failure of the reconstruction of the results could also be the misuse of the mathematical notations, which will be discussed in the next session. During the process of reproducing the paper, we did find the concept is easy to handle, the mathematical model is understandable on a conceptual level, but it is hard to implement the algorithm due to the vague connection between the algorithm and the description of the algorithm. 
