@@ -11,7 +11,19 @@
 
 <summary>
 
-*List of groceries*
+*Introduction*
+  
+*Previous work*
+  
+*Project goals*
+  
+*Methodology*
+  
+*Results*
+  
+*Issues*
+  
+*Discussion*
 
 </summary>
 
