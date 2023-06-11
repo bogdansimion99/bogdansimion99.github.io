@@ -50,11 +50,9 @@
 
 ## Project goals
 
-### We aim to reproduce some parts of the Computer Vision algorithms presented in "TenniSet: A Dataset for Dense Fine-Grained Event Recognition, Localisation and Description", namely event detection and recognition as well as providing a new approach. To improve the performance of tennis annotation we propose adding an optical flow component to the network which will serve as a secondary input to the annotation network. To address the computational costs of optical flow calculations we propose two methods: 
-### a. Frame interpolation: https://arxiv.org/pdf/2011.06294v11.pdf where we use a network to calculate the intermediate optical flow frames. The paper here uses network distillation to improve the performance of an existing optical flow frame interpolation network.
-### b.	Network distillation: We distill an existing optical flow network layer by layer using Craft Distillation: https://par.nsf.gov/servlets/purl/10171699
+### We aim to reproduce some parts of the Computer Vision algorithms presented in [3], namely event detection and recognition as well as providing a new approach. To improve the performance of tennis annotation we propose adding an optical flow component to the network which will serve as a secondary input to the annotation network. To address the computational costs of optical flow calculations we propose two methods. The first one is frame interpolation, designed in "RIFE: Real-Time Intermediate Flow Estimation for Video Frame Interpolation", where we use a network to calculate the intermediate optical flow frames. The paper here uses network distillation to improve the performance of an existing optical flow frame interpolation network. The second one is network distillation, designed in "Craft Distillation: Layer-wise Convolutional Neural Network Distillation". Our goal is to distill an existing optical flow network layer by layer using Craft Distillation: 
 
-### In order to make sure that we were right about what is missing and that our proposed solution is feasible, we start by reproducing the results obtained by Faulkner et. al (2017). Afterwards, we try to see if their solution generalizes to unseen videos of official tennis matches. To test our proposed solution, we use the same dataset and analyse our newly trained models from different perspectives including accuracy and training time.    
+### In order to make sure that we were right about what is missing and that our proposed solution is feasible, we start by reproducing the results obtained by Faulkner et. al. Afterwards, we try to see if their solution generalizes to unseen videos of official tennis matches. To test our proposed solution, we use the same dataset and analyse our newly trained models from different perspectives including accuracy and training time.    
 
 ## Methodology
 
@@ -76,7 +74,7 @@
 ### [2] Huang, Y. C., Liao, I. N., Chen, C. H., İk, T. U., & Peng, W. C. (2019, September). TrackNet: A deep learning network for tracking high-speed and tiny objects in sports applications. In 2019 16th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS) (pp. 1-8). IEEE.
 ### [3] Dosovitskiy, A., Fischer, P., Ilg, E., Hausser, P., Hazirbas, C., Golkov, V., ... & Brox, T. (2015). Flownet: Learning optical flow with convolutional networks. In Proceedings of the IEEE international conference on computer vision (pp. 2758-2766).
 ### [4] Faulkner, H., & Dick, A. (2017, November). Tenniset: a dataset for dense fine-grained event recognition, localisation and description. In 2017 International Conference on Digital Image Computing: Techniques and Applications (DICTA) (pp. 1-8). IEEE.
-###
+### [5] Mora, Silvia Vinyes. Computer Vision and Machine Learning for In-Play Tennis Analysis: Framework, Algorithms and Implementation. Diss. Imperial College London, 2018.
 
 
 
