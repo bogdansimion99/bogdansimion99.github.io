@@ -56,7 +56,7 @@
 
 ## Methodology
 
-###
+### ![Alt Text](https://github.com/bogdansimion99/bogdansimion99.github.io/blob/main/VGG16 Architecture.jpg)
 
 ## Results
 
